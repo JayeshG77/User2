@@ -1,0 +1,42 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<!-- Babel compiler CDN file -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id = "root"></div>
+
+<script type = "text/babel">
+
+    function Product(xyz){
+        console.log(xyz);
+        return(
+            <div class = "col-xl-3">
+                <img src={xyz.path} class="img-fluid"/>
+                <h2>{xyz.price}</h2>
+                <p>{xyz.name}</p>
+                <p><button>Add to cart</button></p>
+            </div> 
+        )  
+    }
+
+    var record =(
+        <div class="container">
+            <div class="row">
+                <Product name="Product 1" path = "https://rukminim1.flixcart.com/image/503/604/l45xea80/shirt/v/e/t/38-men-regular-slim-fit-solid-button-down-collar-formal-shirt-original-imagf4mxnhanzdtn.jpeg?q=50" price = "1000"></Product>
+                <Product name="Product 2" path ="https://rukminim1.flixcart.com/image/503/604/xif0q/shirt/x/m/n/40-men-regular-slim-fit-solid-button-down-collar-formal-shirt-original-imagf4mn9zg7qrmf-bb.jpeg?q=50" price = "2000"></Product>
+                <Product name="Product 3" path ="https://rukminim1.flixcart.com/image/832/832/xif0q/shirt/z/n/y/l-men-regular-slim-fit-solid-button-down-collar-formal-shirt-original-imaghy2yzqnhkkjx.jpeg?q=70" price = "3000"></Product>
+                <Product name="Product 4" path ="https://rukminim1.flixcart.com/image/832/832/xif0q/shirt/q/2/i/42-men-regular-slim-fit-solid-button-down-collar-formal-shirt-original-imagf4nbrwdqgnc6-bb.jpeg?q=70" price = "4000"/>
+            </div>
+        </div>
+    )
+    ReactDOM.render(record,document.getElementById("root"))
+</script>
+
+
+
+

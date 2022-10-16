@@ -1,0 +1,16 @@
+<script>
+    class A {
+        constructor() {
+            console.log("class A");
+        }
+      
+    }
+    class B extends A{              //Single level Inheritance
+        constructor() {
+            console.log("Const B");
+            super();                //call const from parent
+            console.log(this);
+        }
+    }
+    var record = new B;
+</script>

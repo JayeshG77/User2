@@ -1,0 +1,23 @@
+<script>
+    class a {
+        myfunction1 () {
+            console.log("class a");
+        }
+      
+    }
+    class b extends a{              //Single level Inheritance
+        myfunction2 () {
+            console.log("class b");
+        }
+
+        myfunction1 () {
+            super.myfunction1();    //key word used to get parent class output
+            console.log("Class b my fuction 1");
+        }
+    }
+
+    var record = new b;
+    console.log(record);
+    record.myfunction1();
+    record.myfunction2();
+</script>
